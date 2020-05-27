@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
     res.send("API Taller de motos");
   });
 
+
+const rutas_login = require("./routes/login");
+app.use(rutas_login);
+
   const port = 4000;
   app.listen(port, () => {
     console.log(`Escuchando API en http://localhost:${port}`);
