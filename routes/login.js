@@ -2,10 +2,18 @@ const express = require("express");
 const router = express.Router();
 const _controlador = require("../controllers/login");
 
+
+// MIDDLEWARE: Filtro
+
+
+
+/**
+ */
 router.use((req, res, next) => {
   try {
     let url = req.url;
     if (url === "/login") {
+      // Sigue en la busqueda de otros recursos
       next();
     } else {
       let token = req.headers.token;
@@ -16,7 +24,7 @@ router.use((req, res, next) => {
     res.status(401).send({
       ok: false,
       info: error,
-      mensaje: "No autenticado.",
+      mensaje: "No autentificado.",
     });
   }
 });

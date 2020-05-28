@@ -3,7 +3,8 @@ const ServicioPg = require("../services/postgres");
 
 // Importar jwt
 const jwt = require("jsonwebtoken");
-const SECRET_KEY = "123";
+const SECRET_KEY =
+  "68ce89b6fd30da346cecc7812eb66b121623d4971cffeaf528c6a691e4d5e4593b711138c3717e6cbbf5b4a93a2f79097c5eef39a9e2aca2621f19b4b5255dc1";
 /**
  * Realizar autenticación de persona en el sistema
  * @param {*} persona Json de la persona
